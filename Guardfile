@@ -1,8 +1,12 @@
 # A sample Guardfile
 # More info at https://github.com/guard/guard#readme
 
-guard 'haml', :output => 'public', :input => 'src' do
-  watch %r{^src/.+(\.html\.haml)}
+guard 'webrick', :docroot => 'public' do
+end
+
+guard 'haml', :output => 'public', :input => 'source' do
+  watch %r{^source/.+(\.html\.haml)}
+  watch(%r{^partial/.+$}) { |m| Dir['source/**/*'] }
 end
 
 guard 'livereload' do
