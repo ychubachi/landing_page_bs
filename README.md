@@ -1,4 +1,1 @@
-landing_page_bs
-===============
-
-Bootstrap版LP
+bundle exec middleman server

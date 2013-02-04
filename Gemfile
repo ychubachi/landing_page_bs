@@ -1,6 +1,5 @@
-source 'https://rubygems.org'
+source :rubygems
 
-gem 'guard-webrick'
-gem 'guard-haml'
-gem 'guard-livereload'
-gem 'rb-inotify', '~> 0.8.8'
+gem "middleman", "~>3.0.11"
+# gem 'guard-middleman'
+gem 'middleman-livereload'

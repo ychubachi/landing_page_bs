@@ -1,14 +1,11 @@
 # A sample Guardfile
 # More info at https://github.com/guard/guard#readme
 
-guard 'webrick', :docroot => 'public' do
-end
+guard 'middleman' do
+  watch(%r{^config.rb})
+  watch(%r{^data/.*})
+  watch(%r{^source/.*})
 
-guard 'haml', :output => 'public', :input => 'source' do
-  watch %r{^source/.+(\.html\.haml)}
-  watch(%r{^partial/.+$}) { |m| Dir['source/**/*'] }
-end
-
-guard 'livereload' do
-  watch(%r{public/.+\.(css|js|html)})
+  watch(%r{^views/.*})
+  watch(%r{^public/.*})
 end
