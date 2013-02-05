@@ -1,30 +1,76 @@
 ---
-title: Twitter Bootstrap
+title: 産業技術大学院大学（AIIT）
 ---
 
-.container
-  .hero-unit
-    %h2
-      産業技術大学院大学
-      %small Advanced Institute of Industrial Technology
-
-
+.hero-unit
+  %h2
+    産業技術大学院大学
+    %br
+    %small Advanced Institute of Industrial Technology
   .row
-    .span4
-      %h3 メリット1
-      仕事に役立つ業務遂行能力育成型の教育．
-      2年間の通学で専門職修士号が取得できます．
-    .span4
-      %h3 メリット2
+    = image_tag 'aiit_logo_200x200.gif', class: 'span2'
+    .span8
       %p
-        社会人が通学しやすい立地．
-        りんかい線品川シーサイド駅徒歩3分，
-        京急線青物横丁駅徒歩10分，
-        品川駅から都バスで10分．
-    .span4
-      %h3 メリット3
-      公立大学ならではの安心感
+        高度な専門職人材を育成する，東京都が設置した大学院大学です．
+        情報アーキテクチャ専攻と創造技術専攻の2つのプログラム．
+        仕事に役立つ業務遂行能力育成型の教育．
+        2年間の通学で専門職修士号が取得できます．
+      .row
+      .row
+        .span5
+          %small
+            %i.icon-info-sign
+            パンフレットなどを無料でお送りいたします．お気軽にお申し込み ください．
+        .span3
+          %a.btn.btn-primary.btn-large{href: 'https://pr.aiit.ac.jp/wm/form/new'}
+            資料請求 &raquo;
+        .span5
+          %small
+            %i.icon-info-sign
+            本ページはランディング・ページです．大学の詳細はWeb Siteをご覧ください．
+        .span3
+          %a.btn.btn-large{href: 'http://aiit.ac.jp/', target: '_source'}
+            Web Site &raquo;
 
+.row
+  .span4
+    %h3{style: 'text-align: center'}
+      メリット1：時間
+      %i.icon-ok
+    %p
+      授業は平日は18:30〜21:40，土曜日は10:00〜18:00．
+      お仕事をしながらでも通学することができます．
+  .span4
+    %h3{style: 'text-align: center'}
+      メリット2：立地
+      %i.icon-ok
+    %p
+      キャンパスは
+      りんかい線品川シーサイド駅徒歩3分，
+      京急線青物横丁駅徒歩10分，
+      品川駅から都バスで10分．
+      社会人が通学しやすい立地．
+  .span4
+    %h3{style: 'text-align: center'}
+      メリット3：学費
+      %i.icon-ok
+    %p
+      公立大学ならではの安心感．
+      授業料減免制度・奨学金制度あり．
+      給付金対象．
+%hr
+.row
+  .span5
+    %h4{style: 'text-align: center'}
+      入試説明会のご案内
+      %i.icon-calendar
+    %iframe{:frameborder => "0", :height => "400", :scrolling => "no", :src => "https://www.google.com/calendar/embed?showTitle=0&showNav=0&showDate=0&showPrint=0&showTabs=0&showCalendars=0&showTz=0&mode=AGENDA&height=600&wkst=1&bgcolor=%23FFFFFF&src=hmsf4o8mmqki7oqda7dm5sml00%40group.calendar.google.com&color=%23853104&ctz=Asia%2FTokyo", :style => " border-width:0 "}
+  .span2
+  .span5{style: 'text-align: center'}
+    %h4
+      入試日程のご案内
+      %i.icon-calendar
+    %iframe.flush-right{:frameborder => "0", :height => "400", :scrolling => "no", :src => "https://www.google.com/calendar/embed?showTitle=0&showNav=0&showDate=0&showPrint=0&showTabs=0&showCalendars=0&showTz=0&mode=AGENDA&height=600&wkst=1&bgcolor=%23FFFFFF&src=nfhlajafmvgcd7kuppr94ib02o%40group.calendar.google.com&color=%23853104&ctz=Asia%2FTokyo", :style => " border-width:0 "}
 
 
 
