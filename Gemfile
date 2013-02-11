@@ -1,5 +1,5 @@
 source :rubygems
 
-gem "middleman", "~>3.0.11"
-# gem 'guard-middleman'
+gem "middleman"
 gem 'middleman-livereload'
+gem 'bootstrap-sass'
