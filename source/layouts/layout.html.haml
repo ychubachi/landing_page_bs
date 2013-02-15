@@ -4,16 +4,61 @@
     %meta{:charset => "utf-8"}
     %title= data.page.title || "Untitled"
     %meta{:content => "width=device-width, initial-scale=1.0", |
-      :name => "viewport"}
-    = stylesheet_link_tag "bootstrap", "bootstrap-responsive"
+      :name => "viewport"}                                     |
+    = stylesheet_link_tag "application"
   %body
+    .navbar.navbar-inverse.navbar-fixed-top
+      .container
+        .navbar-inner
+          %button{'type' => "button", 'class' => "btn btn-navbar", |
+            'data-toggle' => "collapse", 'data-target' => ".nav-collapse"} |
+            %span{'class' => 'icon-bar'}
+            %span{'class' => 'icon-bar'}
+            %span{'class' => 'icon-bar'}
+          %a.brand{href: 'index.html', style: 'margin-left: 0px'} AIIT
+          .nav-collapse.collapse
+            %ul.nav
+              %li
+                %a{href: './index.html'} はじめに
+              %li
+                %a{href: './feature.html'} 特長
+              %li
+                %a{href: './guidance.html'} 入試説明会（1）
+              %li
+                %a{href: './guidance_photos.html'} 入試説明会（2）
+              %li
+                %a{href: './thank_you.html'}  おわりに
     .container
+      .hero-unit
+        .row-fluid
+          .span12
+            %h2
+              産業技術大学院大学
+              %br
+              %small Advanced Institute of Industrial Technology
+        .row-fluid
+          .span2{style: 'text-align: center'}
+            = image_tag 'aiit_logo_90x90.gif'
+          .span10
+            %p
+              高度な専門職人材を育成する，東京都が設置した大学院大学です．
+              仕事に役立つ業務遂行能力育成型の教育を通し，
+              専門分野で頂点に立つ人材を育成します．
+            .row-fluid
+              .span9
+                %small.pull-right
+                  もっと詳しく
+                  %i.icon-hand-right
+              %a.span3.btn.btn-primary{ |
+                  href: 'http://aiit.ac.jp/', target: '_blank'} |
+                Web &raquo;
       = yield
       %footer
         %hr
         %p
           © Advanced Institute of Industrial Technology 2013
     .javascript
-      = javascript_include_tag  'jquery', 'bootstrap'
+      = javascript_include_tag 'application'
       /[if lt IE 9]
-        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js">
+        </script>
