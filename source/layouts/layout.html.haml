@@ -2,12 +2,10 @@
 %html{:lang => "ja"}
   %head
     %meta{:charset => "utf-8"}
-    %title= data.page.title || "Untitled"
     %meta{:content => "width=device-width, initial-scale=1.0", |
       :name => "viewport"}
-    %link{rel: "shortcut icon", |
-      href: "http://pr.aiit.ac.jp/images/favicon.ico", |
-      type: "image/vnd.microsoft.icon"}
+    %title= data.page.title || "Untitled"
+    = favicon_tag 'https://pr.aiit.ac.jp/images/favicon.ico'
     = stylesheet_link_tag "application"
   %body
     .navbar.navbar-inverse.navbar-fixed-top
@@ -60,8 +58,10 @@
         %hr
         %p
           © Advanced Institute of Industrial Technology 2013
+          
     .javascript
       = javascript_include_tag 'application'
-      /[if lt IE 9]
-        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js">
-        </script>
+      = partial 'layouts/ie'
+      = partial 'layouts/google_analytics'
+      = partial 'layouts/tracker'
+      = partial 'layouts/retargeting_add'
